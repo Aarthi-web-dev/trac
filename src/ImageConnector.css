@@ -1,0 +1,146 @@
+/* Add these styles to your CSS file
+
+.react-flow__node-colorBox {
+    padding: 0;
+    border-radius: 4px;
+    width: fit-content;
+    height: fit-content;
+  }
+  
+  .react-flow__handle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #3b82f6;
+  }
+  
+  .react-flow__handle:hover {
+    background-color: #1d4ed8;
+  }
+  
+  .react-flow__edge.selected .react-flow__edge-path {
+    stroke: #ff0000;
+    stroke-width: 3;
+  }
+  
+  .react-flow__edge .react-flow__edge-path {
+    stroke: #666;
+    stroke-width: 3;
+  }
+  
+  .react-flow__node.selected {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+  
+  .react-flow__node.selected .color-box-node {
+    border: 2px solid #3b82f6;
+  }
+  
+  .color-box-node {
+    border: 2px solid #d1d5db;
+  } */
+
+  /* Add these styles to your CSS file */
+  .react-flow__node-colorBox {
+    padding: 0;
+    border-radius: 4px;
+    width: fit-content;
+    height: fit-content;
+  }
+  
+  /* Square handle styling */
+  .square-handle {
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 0 !important; /* Make sure it's square */
+    background-color: #3b82f6 !important;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    /* Position correctly at the edge */
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+  
+  .react-flow__handle {
+    width: 8px;
+    height: 8px;
+    background-color: #3b82f6;
+    z-index: 10;
+  }
+  
+  .react-flow__handle:hover {
+    background-color: #1d4ed8;
+    transform: scale(1.2) translate(-50%, -50%);
+    cursor: crosshair;
+  }
+  
+  /* Visual feedback for connectable state */
+  .react-flow__handle.connectable {
+    cursor: crosshair;
+  }
+  
+  .react-flow__handle.connecting {
+    background-color: #10b981 !important;
+  }
+  
+  /* Edge styling for orthogonal routes */
+  .react-flow__edge.selected .react-flow__edge-path {
+    stroke: #ff0000;
+    stroke-width: 3;
+  }
+  
+  .react-flow__edge .react-flow__edge-path {
+    stroke: #666;
+    stroke-width: 2;
+    fill: none;
+  }
+  
+  /* Additional styling for smoothstep edges to make them more orthogonal */
+  .react-flow__edge-smoothstep .react-flow__edge-path {
+    stroke-linecap: square;
+  }
+  
+  /* Node selection styling */
+  .react-flow__node.selected {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+  
+  .react-flow__node.selected .color-box-node {
+    border: 2px solid #3b82f6;
+  }
+  
+  .color-box-node {
+    border: 2px solid #d1d5db;
+  }
+  
+  /* Connection line styling */
+  .react-flow__connection-path {
+    stroke: #3b82f6;
+    stroke-width: 2;
+  }
+  
+  /* Connection line styling when valid */
+  .react-flow__connection.valid .react-flow__connection-path {
+    stroke: #10b981;
+  }
+  
+  /* Connection line styling when invalid */
+  .react-flow__connection.invalid .react-flow__connection-path {
+    stroke: #ef4444;
+  }
+  
+  /* Sidebar styling */
+  .sidebar {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    z-index: 10;
+  }
+  
+  .sidebar-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+  }
+  
+  /* Improve minimap */
+  .react-flow__minimap {
+    background-color: #f9fafb;
+  }
